@@ -1,0 +1,11 @@
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\bin\Debug\SimiSoft.BML.dll
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\bin\Debug\SimiSoft.BML.pdb
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\bin\Debug\Dapper.dll
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\bin\Debug\SimiSoft.DAL.dll
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\bin\Debug\SimiSoft.DAL.pdb
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\bin\Debug\Dapper.xml
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\obj\Debug\SimiSoft.BML.csprojAssemblyReference.cache
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\obj\Debug\SimiSoft.BML.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\obj\Debug\SimiSoft.BML.csproj.CopyComplete
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\obj\Debug\SimiSoft.BML.dll
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft.BML\obj\Debug\SimiSoft.BML.pdb
