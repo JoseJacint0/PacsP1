@@ -16,7 +16,7 @@ namespace SimiSoft
     public partial class frmNMCliente : DevExpress.XtraEditors.XtraForm
     {
         private Cliente cliente;
-        //cuando es nuevo producto
+        //cuando es nuevo cliente
         public frmNMCliente()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace SimiSoft
         }
         private void frmNMCliente_Load(object sender, EventArgs e)
         {
-
+            Misc.actualiza = true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -56,16 +56,17 @@ namespace SimiSoft
                         descuento = Convert.ToDecimal(txtDescuento.Text)
                     }.Add() > 0)
                     {
-                        XtraMessageBox.Show("Cliente insertado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Cliente insertado correctamente", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
-                        this.Close();
+                        Misc.actualiza = true;
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la inserción", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrio un error en la inserción", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
-                        this.Close();
+                        Misc.actualiza = false;
                     }
+                    this.Close();
                 }
                 else
                 {
@@ -75,16 +76,17 @@ namespace SimiSoft
                     cliente.descuento = Convert.ToDecimal(txtDescuento.Text);
                     if (cliente.Update() > 0)
                     {
-                        XtraMessageBox.Show("Cliente modificado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Cliente modificado correctamente", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
-                        this.Close();
+                        Misc.actualiza = true;
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la modificación", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrio un error en la modificación", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
-                        this.Close();
+                        Misc.actualiza = false;
                     }
+                    this.Close();
                 }
             }
         }
@@ -133,6 +135,17 @@ namespace SimiSoft
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmNMCliente_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Misc.actualiza == false)
+                if (XtraMessageBox.Show("¿Deseas cerrar esta pantalla?", "SimiSoft",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
         }
     }
 }

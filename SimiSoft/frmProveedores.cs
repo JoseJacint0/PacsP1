@@ -48,7 +48,7 @@ namespace SimiSoft
         private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gvProveedores.FocusedRowHandle >= 0)
-                if (XtraMessageBox.Show(string.Format("¿Esta seguro de eliminar el proveedor? \n\n" +
+                if (XtraMessageBox.Show(string.Format("¿Está seguro de eliminar el proveedor? \n\n" +
                     "{0}", gvProveedores.GetFocusedRowCellValue("nombre")),
                     "SimiSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                     DialogResult.Yes)
@@ -61,7 +61,7 @@ namespace SimiSoft
                         XtraMessageBox.Show("Proveedor eliminado correctamente", "SimiSoft",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        XtraMessageBox.Show("Ocurrio un error al eliminar el proveedor. \nVerifique con el deparamento de TI",
+                        XtraMessageBox.Show("Ocurrió un error al eliminar el proveedor. \nVerifique con el deparamento de TI",
                             "SimiSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     proveedorBindingSource.DataSource = new Proveedor().GetAll();
                     gvProveedores.BestFitColumns();
@@ -70,7 +70,8 @@ namespace SimiSoft
 
         private void btnActualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            proveedorBindingSource.DataSource = new Proveedor().GetAll();
+            gvProveedores.BestFitColumns();
         }
     }
 }

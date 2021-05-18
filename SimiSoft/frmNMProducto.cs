@@ -60,13 +60,13 @@ namespace SimiSoft
                         marca = txtMarca.Text
                     }.Add() > 0)
                     {
-                        XtraMessageBox.Show("Producto insertado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Producto insertado correctamente", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la inserción", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrió un error en la inserción", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
                         this.Close();
                     }
@@ -81,13 +81,13 @@ namespace SimiSoft
                     producto.marca = txtMarca.Text;
                     if (producto.Update() > 0)
                     {
-                        XtraMessageBox.Show("Producto modificado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Producto modificado correctamente", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la modificación", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrió un error en la modificación", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }
@@ -106,7 +106,7 @@ namespace SimiSoft
             var ban = false;
             if (string.IsNullOrEmpty(txtDescripcion.Text))
             {
-                txtDescripcion.ErrorText = "Ingresa la descripción";
+                txtDescripcion.ErrorText = "Ingresa una descripción";
                 txtDescripcion.Focus();
                 ban = true;
             }

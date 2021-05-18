@@ -106,3 +106,8 @@ C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft\obj\Debug\SimiSoft.frmLogin.resour
 C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft\obj\Debug\SimiSoft.frmNMProducto.resources
 C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft\obj\Debug\SimiSoft.frmNMCliente.resources
 C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft\obj\Debug\SimiSoft.frmNMProveedor.resources
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft\obj\Debug\SimiSoft.frmVentas.resources
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft\obj\Debug\SimiSoft.frmNVenta.resources
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft\obj\Debug\SimiSoft.frmPagos.resources
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft\obj\Debug\SimiSoft.frmFormasPago.resources
+C:\Users\ADMIN\source\repos\SimiSoft\SimiSoft\obj\Debug\SimiSoft.frmNMFPago.resources

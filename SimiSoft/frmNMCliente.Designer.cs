@@ -113,6 +113,8 @@ namespace SimiSoft
             // 
             this.txtDescuento.Location = new System.Drawing.Point(82, 131);
             this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Properties.Mask.EditMask = "d";
+            this.txtDescuento.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDescuento.Size = new System.Drawing.Size(167, 20);
             this.txtDescuento.TabIndex = 4;
             // 
@@ -171,6 +173,7 @@ namespace SimiSoft
             this.Name = "frmNMCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNMCliente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNMCliente_FormClosing);
             this.Load += new System.EventHandler(this.frmNMCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();

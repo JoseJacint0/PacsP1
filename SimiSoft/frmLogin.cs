@@ -34,13 +34,17 @@ namespace SimiSoft
                     password = txtContraseña.Text
                 }.Login()!= null)
                 {
-                    XtraMessageBox.Show("Acceso correcto");
+                    Misc.actualiza = true;
+                    XtraMessageBox.Show("Acceso correcto", "SimiSoft", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DialogResult = DialogResult.OK;
                     //mostrar main
                 }
                 else
                 {
-                    XtraMessageBox.Show("Error en las credenciales");
+                    XtraMessageBox.Show("Error en las credenciales", "SimiSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsuario.EditValue = null;
+                    txtContraseña.EditValue = null;
+                    txtUsuario.Focus();
                 }
             }
         }
@@ -69,7 +73,38 @@ namespace SimiSoft
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+        }
+
+        private void txtContraseña_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Misc.actualiza == false)
+                if (XtraMessageBox.Show("¿Deseas cerrar esta pantalla?", "SimiSoft - 2021",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
         }
     }
 }

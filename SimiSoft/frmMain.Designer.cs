@@ -36,9 +36,12 @@ namespace SimiSoft
             this.btnSalir = new DevExpress.XtraBars.BarButtonItem();
             this.mnCatalogos = new DevExpress.XtraBars.BarSubItem();
             this.btnClientes = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFormasPago = new DevExpress.XtraBars.BarButtonItem();
             this.btnProductos = new DevExpress.XtraBars.BarButtonItem();
             this.btnProveedores = new DevExpress.XtraBars.BarButtonItem();
-            this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
+            this.mnVentas = new DevExpress.XtraBars.BarSubItem();
+            this.btnAdminVentas = new DevExpress.XtraBars.BarButtonItem();
+            this.mnApariencia = new DevExpress.XtraBars.SkinBarSubItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -68,9 +71,12 @@ namespace SimiSoft
             this.btnProductos,
             this.btnProveedores,
             this.barButtonItem1,
-            this.skinBarSubItem1});
+            this.mnApariencia,
+            this.mnVentas,
+            this.btnAdminVentas,
+            this.btnFormasPago});
             this.bManager.MainMenu = this.bar2;
-            this.bManager.MaxItemId = 9;
+            this.bManager.MaxItemId = 12;
             this.bManager.StatusBar = this.bar3;
             // 
             // bar2
@@ -82,7 +88,8 @@ namespace SimiSoft
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.mnArchivo),
             new DevExpress.XtraBars.LinkPersistInfo(this.mnCatalogos),
-            new DevExpress.XtraBars.LinkPersistInfo(this.skinBarSubItem1)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnVentas),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnApariencia)});
             this.bar2.OptionsBar.DrawBorder = false;
             this.bar2.OptionsBar.DrawDragBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
@@ -102,6 +109,7 @@ namespace SimiSoft
             this.btnSalir.Caption = "Salir";
             this.btnSalir.Id = 1;
             this.btnSalir.Name = "btnSalir";
+            this.btnSalir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSalir_ItemClick);
             // 
             // mnCatalogos
             // 
@@ -109,6 +117,7 @@ namespace SimiSoft
             this.mnCatalogos.Id = 2;
             this.mnCatalogos.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnClientes),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFormasPago),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnProductos),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnProveedores)});
             this.mnCatalogos.Name = "mnCatalogos";
@@ -119,6 +128,13 @@ namespace SimiSoft
             this.btnClientes.Id = 3;
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClientes_ItemClick);
+            // 
+            // btnFormasPago
+            // 
+            this.btnFormasPago.Caption = "FormasPago";
+            this.btnFormasPago.Id = 11;
+            this.btnFormasPago.Name = "btnFormasPago";
+            this.btnFormasPago.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFormasPago_ItemClick);
             // 
             // btnProductos
             // 
@@ -134,11 +150,26 @@ namespace SimiSoft
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProveedores_ItemClick);
             // 
-            // skinBarSubItem1
+            // mnVentas
             // 
-            this.skinBarSubItem1.Caption = "Apariencia";
-            this.skinBarSubItem1.Id = 8;
-            this.skinBarSubItem1.Name = "skinBarSubItem1";
+            this.mnVentas.Caption = "Ventas";
+            this.mnVentas.Id = 9;
+            this.mnVentas.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnAdminVentas)});
+            this.mnVentas.Name = "mnVentas";
+            // 
+            // btnAdminVentas
+            // 
+            this.btnAdminVentas.Caption = "Administrar";
+            this.btnAdminVentas.Id = 10;
+            this.btnAdminVentas.Name = "btnAdminVentas";
+            this.btnAdminVentas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdminVentas_ItemClick);
+            // 
+            // mnApariencia
+            // 
+            this.mnApariencia.Caption = "Apariencia";
+            this.mnApariencia.Id = 8;
+            this.mnApariencia.Name = "mnApariencia";
             // 
             // bar3
             // 
@@ -235,7 +266,10 @@ namespace SimiSoft
         private DevExpress.XtraBars.BarButtonItem btnProveedores;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager tabMdiManager;
-        private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
+        private DevExpress.XtraBars.SkinBarSubItem mnApariencia;
+        private DevExpress.XtraBars.BarSubItem mnVentas;
+        private DevExpress.XtraBars.BarButtonItem btnAdminVentas;
+        private DevExpress.XtraBars.BarButtonItem btnFormasPago;
     }
 }
 

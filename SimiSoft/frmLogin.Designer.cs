@@ -46,6 +46,7 @@ namespace SimiSoft
             this.labelControl1.Size = new System.Drawing.Size(40, 13);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Usuario:";
+            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // labelControl2
             // 
@@ -54,6 +55,7 @@ namespace SimiSoft
             this.labelControl2.Size = new System.Drawing.Size(60, 13);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Contraseña:";
+            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // btnCancelar
             // 
@@ -71,7 +73,7 @@ namespace SimiSoft
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 2;
-            this.btnOk.Text = "Ok";
+            this.btnOk.Text = "Guardar";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // txtContraseña
@@ -81,6 +83,7 @@ namespace SimiSoft
             this.txtContraseña.Properties.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(131, 20);
             this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.EditValueChanged += new System.EventHandler(this.txtContraseña_EditValueChanged);
             // 
             // txtUsuario
             // 
@@ -88,6 +91,7 @@ namespace SimiSoft
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(131, 20);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.EditValueChanged += new System.EventHandler(this.txtUsuario_EditValueChanged);
             // 
             // frmLogin
             // 
@@ -111,6 +115,7 @@ namespace SimiSoft
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtContraseña.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();

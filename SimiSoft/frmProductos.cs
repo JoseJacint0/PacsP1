@@ -48,7 +48,7 @@ namespace SimiSoft
         private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gvProductos.FocusedRowHandle >= 0)
-                if (XtraMessageBox.Show(string.Format("¿Esta seguro de eliminar el producto? \n\n" +
+                if (XtraMessageBox.Show(string.Format("¿Está seguro de eliminar el producto? \n\n" +
                     "{0}", gvProductos.GetFocusedRowCellValue("descripcion")),
                     "SimiSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                     DialogResult.Yes)
@@ -61,11 +61,17 @@ namespace SimiSoft
                         XtraMessageBox.Show("Producto eliminado correctamente", "SimiSoft",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        XtraMessageBox.Show("Ocurrio un error al eliminar el producto. \nVerifique con el deparamento de TI",
+                        XtraMessageBox.Show("Ocurrió un error al eliminar el producto. \nVerifique con el deparamento de TI",
                             "SimiSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     productoBindingSource.DataSource = new Producto().GetAll();
                     gvProductos.BestFitColumns();
                 }
+        }
+
+        private void btnActualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            productoBindingSource.DataSource = new Producto().GetAll();
+            gvProductos.BestFitColumns();
         }
     }
 }

@@ -34,7 +34,6 @@ namespace SimiSoft
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnActualizar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNuevo = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.btnModificar = new DevExpress.XtraBars.BarButtonItem();
             this.btnEliminar = new DevExpress.XtraBars.BarButtonItem();
@@ -43,6 +42,7 @@ namespace SimiSoft
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnNuevo = new DevExpress.XtraBars.BarButtonItem();
             this.gcProveedores = new DevExpress.XtraGrid.GridControl();
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvProveedores = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -98,13 +98,6 @@ namespace SimiSoft
             this.btnActualizar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnActualizar.ImageOptions.LargeImage")));
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActualizar_ItemClick);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Caption = "Nuevo";
-            this.btnNuevo.Id = 1;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevo_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -176,6 +169,13 @@ namespace SimiSoft
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 524);
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Caption = "Nuevo";
+            this.btnNuevo.Id = 1;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevo_ItemClick);
+            // 
             // gcProveedores
             // 
             this.gcProveedores.DataSource = this.proveedorBindingSource;
@@ -213,6 +213,10 @@ namespace SimiSoft
             this.colidProveedor.Caption = "ID";
             this.colidProveedor.FieldName = "idProveedor";
             this.colidProveedor.Name = "colidProveedor";
+            this.colidProveedor.OptionsColumn.AllowEdit = false;
+            this.colidProveedor.OptionsColumn.AllowFocus = false;
+            this.colidProveedor.OptionsColumn.AllowIncrementalSearch = false;
+            this.colidProveedor.OptionsColumn.AllowMove = false;
             this.colidProveedor.Visible = true;
             this.colidProveedor.VisibleIndex = 0;
             // 
@@ -221,6 +225,10 @@ namespace SimiSoft
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
             this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.AllowEdit = false;
+            this.colnombre.OptionsColumn.AllowFocus = false;
+            this.colnombre.OptionsColumn.AllowIncrementalSearch = false;
+            this.colnombre.OptionsColumn.AllowMove = false;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
             // 
@@ -229,6 +237,10 @@ namespace SimiSoft
             this.coltelefono.Caption = "Teléfono";
             this.coltelefono.FieldName = "telefono";
             this.coltelefono.Name = "coltelefono";
+            this.coltelefono.OptionsColumn.AllowEdit = false;
+            this.coltelefono.OptionsColumn.AllowFocus = false;
+            this.coltelefono.OptionsColumn.AllowIncrementalSearch = false;
+            this.coltelefono.OptionsColumn.AllowMove = false;
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 2;
             // 
@@ -237,6 +249,10 @@ namespace SimiSoft
             this.colactivo.Caption = "Activo";
             this.colactivo.FieldName = "activo";
             this.colactivo.Name = "colactivo";
+            this.colactivo.OptionsColumn.AllowEdit = false;
+            this.colactivo.OptionsColumn.AllowFocus = false;
+            this.colactivo.OptionsColumn.AllowIncrementalSearch = false;
+            this.colactivo.OptionsColumn.AllowMove = false;
             // 
             // frmProveedores
             // 

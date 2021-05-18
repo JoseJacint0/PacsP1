@@ -80,13 +80,13 @@ namespace SimiSoft
                         telefono = txtTelefono.Text,                     
                     }.Add() > 0)
                     {
-                        XtraMessageBox.Show("Proveedor insertado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Proveedor insertado correctamente", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la inserción", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrio un error en la inserción", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
                         this.Close();
                     }
@@ -97,13 +97,13 @@ namespace SimiSoft
                     proveedor.telefono = txtTelefono.Text;                  
                     if (proveedor.Update() > 0)
                     {
-                        XtraMessageBox.Show("Proveedor modificado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Proveedor modificado correctamente", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la modificación", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrió un error en la modificación", "SimiSoft", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }

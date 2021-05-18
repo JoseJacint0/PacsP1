@@ -48,7 +48,7 @@ namespace SimiSoft
         private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gvClientes.FocusedRowHandle >= 0)
-                if (XtraMessageBox.Show(string.Format("¿Esta seguro de eliminar el cliente? \n\n" +
+                if (XtraMessageBox.Show(string.Format("¿Está seguro de eliminar el cliente? \n\n" +
                     "{0}", gvClientes.GetFocusedRowCellValue("nombre")),
                     "SimiSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                     DialogResult.Yes)
@@ -61,11 +61,17 @@ namespace SimiSoft
                         XtraMessageBox.Show("Cliente eliminado correctamente", "SimiSoft",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        XtraMessageBox.Show("Ocurrio un error al eliminar el cliente. \nVerifique con el deparamento de TI",
+                        XtraMessageBox.Show("Ocurrió un error al eliminar el cliente. \nVerifique con el deparamento de TI",
                             "SimiSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     clienteBindingSource.DataSource = new Cliente().GetAll();
                     gvClientes.BestFitColumns();
                 }
+        }
+
+        private void btnActualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            clienteBindingSource.DataSource = new Cliente().GetAll();
+            gvClientes.BestFitColumns();
         }
     }
 }

@@ -101,6 +101,7 @@ namespace SimiSoft
             this.btnActualizar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.ImageOptions.Image")));
             this.btnActualizar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnActualizar.ImageOptions.LargeImage")));
             this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActualizar_ItemClick);
             // 
             // btnNuevo
             // 
@@ -213,6 +214,10 @@ namespace SimiSoft
             this.colidProducto.Caption = "ID";
             this.colidProducto.FieldName = "idProducto";
             this.colidProducto.Name = "colidProducto";
+            this.colidProducto.OptionsColumn.AllowEdit = false;
+            this.colidProducto.OptionsColumn.AllowFocus = false;
+            this.colidProducto.OptionsColumn.AllowIncrementalSearch = false;
+            this.colidProducto.OptionsColumn.AllowMove = false;
             this.colidProducto.Visible = true;
             this.colidProducto.VisibleIndex = 0;
             // 
@@ -221,6 +226,10 @@ namespace SimiSoft
             this.coldescripcion.Caption = "Descripción";
             this.coldescripcion.FieldName = "descripcion";
             this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.OptionsColumn.AllowEdit = false;
+            this.coldescripcion.OptionsColumn.AllowFocus = false;
+            this.coldescripcion.OptionsColumn.AllowIncrementalSearch = false;
+            this.coldescripcion.OptionsColumn.AllowMove = false;
             this.coldescripcion.Visible = true;
             this.coldescripcion.VisibleIndex = 1;
             // 
@@ -229,6 +238,10 @@ namespace SimiSoft
             this.colunidadMedida.Caption = "UnidadM";
             this.colunidadMedida.FieldName = "unidadMedida";
             this.colunidadMedida.Name = "colunidadMedida";
+            this.colunidadMedida.OptionsColumn.AllowEdit = false;
+            this.colunidadMedida.OptionsColumn.AllowFocus = false;
+            this.colunidadMedida.OptionsColumn.AllowIncrementalSearch = false;
+            this.colunidadMedida.OptionsColumn.AllowMove = false;
             this.colunidadMedida.Visible = true;
             this.colunidadMedida.VisibleIndex = 2;
             // 
@@ -237,6 +250,10 @@ namespace SimiSoft
             this.colcodigo.Caption = "Código";
             this.colcodigo.FieldName = "codigo";
             this.colcodigo.Name = "colcodigo";
+            this.colcodigo.OptionsColumn.AllowEdit = false;
+            this.colcodigo.OptionsColumn.AllowFocus = false;
+            this.colcodigo.OptionsColumn.AllowIncrementalSearch = false;
+            this.colcodigo.OptionsColumn.AllowMove = false;
             this.colcodigo.Visible = true;
             this.colcodigo.VisibleIndex = 3;
             // 
@@ -245,6 +262,10 @@ namespace SimiSoft
             this.colprecio.Caption = "Precio";
             this.colprecio.FieldName = "precio";
             this.colprecio.Name = "colprecio";
+            this.colprecio.OptionsColumn.AllowEdit = false;
+            this.colprecio.OptionsColumn.AllowFocus = false;
+            this.colprecio.OptionsColumn.AllowIncrementalSearch = false;
+            this.colprecio.OptionsColumn.AllowMove = false;
             this.colprecio.Visible = true;
             this.colprecio.VisibleIndex = 4;
             // 
@@ -253,6 +274,10 @@ namespace SimiSoft
             this.colstock.Caption = "Stock";
             this.colstock.FieldName = "stock";
             this.colstock.Name = "colstock";
+            this.colstock.OptionsColumn.AllowEdit = false;
+            this.colstock.OptionsColumn.AllowFocus = false;
+            this.colstock.OptionsColumn.AllowIncrementalSearch = false;
+            this.colstock.OptionsColumn.AllowMove = false;
             this.colstock.Visible = true;
             this.colstock.VisibleIndex = 5;
             // 
@@ -261,6 +286,10 @@ namespace SimiSoft
             this.colmarca.Caption = "Marca";
             this.colmarca.FieldName = "marca";
             this.colmarca.Name = "colmarca";
+            this.colmarca.OptionsColumn.AllowEdit = false;
+            this.colmarca.OptionsColumn.AllowFocus = false;
+            this.colmarca.OptionsColumn.AllowIncrementalSearch = false;
+            this.colmarca.OptionsColumn.AllowMove = false;
             this.colmarca.Visible = true;
             this.colmarca.VisibleIndex = 6;
             // 
@@ -269,6 +298,10 @@ namespace SimiSoft
             this.colactivo.Caption = "Activo";
             this.colactivo.FieldName = "activo";
             this.colactivo.Name = "colactivo";
+            this.colactivo.OptionsColumn.AllowEdit = false;
+            this.colactivo.OptionsColumn.AllowFocus = false;
+            this.colactivo.OptionsColumn.AllowIncrementalSearch = false;
+            this.colactivo.OptionsColumn.AllowMove = false;
             // 
             // frmProductos
             // 
